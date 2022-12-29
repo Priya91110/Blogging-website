@@ -1,0 +1,11 @@
+{%extends 'blogapp/index.html'%}
+{%block content%}
+signup page
+<form action"home" method="POST">
+   {% csrf_token %}
+
+   {{form.as_p}}
+   <input type="submit" value="register">
+</form>
+
+{%endblock%}

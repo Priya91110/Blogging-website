@@ -1,0 +1,10 @@
+{%extends "blogapp/index.html"%}
+{%block content %}
+Post a new blog
+<form action="" method="POST" enctype="multipart/form-data">
+{%csrf_token%}
+{{form}}
+<input type="submit" value="Register">
+</form>
+
+{%endblock%}

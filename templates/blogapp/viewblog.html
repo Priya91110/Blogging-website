@@ -1,0 +1,19 @@
+{%extends "blogapp/index.html"%}
+{%block content %}
+<h1>view blog page</h1><br>
+<hr>
+{%if newpostdata %}
+<table>
+    {% for i in newpostdata%}
+    <tr>Title :-  {{i.Title}}<tr><br>
+    <tr>Description :- {{i.Description}}<tr><br>
+    <tr>Image :- <img src="{{i.Image.url}}"><tr><br>
+    <tr>Posted by:-<tr><br>
+        <br>
+        <hr>
+    {%endfor%}
+</table>
+    {%else%}
+    no data
+{% endif %}
+{%endblock%}
